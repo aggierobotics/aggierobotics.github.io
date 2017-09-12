@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+
   <title>Aggie Robotics Homepage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -17,28 +19,37 @@
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
-  .bg-1 { 
+  .bg-1 {
       background-color: #1abc9c; /* Green */
       color: #ffffff;
   }
-  .bg-2 { 
+  .bg-2 {
       background-color: #474e5d; /* Dark Blue */
       color: #ffffff;
   }
-  .bg-3 { 
+  .bg-3 {
       background-color: #ffffff; /* White */
       color: #555555;
   }
-  .bg-4 { 
+  .bg-4 {
       background-color: #2f2f2f; /* Black Gray */
       color: #fff;
   }
-  
+
   .bg-5 {
 		background-color: #bbc2c6; /* Light Green*/
 		color: #ffffff;
   }
-  
+
+  .bg-6{
+    background-color: #DDDDDD; /*silver*/
+    background-image:url('images/stripe.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   .container-fluid {
       padding-top: 70px;
       padding-bottom: 70px;
@@ -55,7 +66,7 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
-	  
+
 	  .div-wrapper {
     position: relative;
     height: 300px;
@@ -69,6 +80,46 @@
     bottom: 0;
 }
 
+.img-shadow{
+    box-shadow: 5px 5px 20px #888888;
+}
+
+.rounded{
+  border-radius: 10px;
+  background: #000;
+}
+/*Text Effects*/
+  .glidetext{
+  position: relative;
+  /*Set initial position of your text. Make it just enough to hide the text from view:*/
+  left: -500px;
+  right: -500px;
+  }
+
+  .blockquote {
+font-family: Georgia, serif;
+font-size: 16px;
+font-style: italic;
+width: 450px;
+margin: 0.25em 0;
+padding: 0.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #FFF;
+border-left:5px solid #FF7F00;
+background:#4b8baf;
+}
+
+.blockquote cite {
+color: #efefef;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+
+.blockquote cite:before {
+content: "\2014 \2009";
+}
 
 
 }
@@ -83,16 +134,20 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">AGGIE|ROBOTICS</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#who">WHO</a></li>
         <li><a href="#what">WHAT</a></li>
+
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#who">WHO</a></li>
+        <li><a href="#about">WHY</a></li>
         <li><a href="#where">WHERE</a></li>
-        <li><a href="#">WHY</a></li>
+
+
       </ul>
     </div>
   </div>
@@ -101,67 +156,177 @@
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">A place to innovate and empower</h3>
-  <a href= "deadlink.html"><img src="images/design_us.gif" class="img-responsive img-circle margin" style="display:inline" alt="designus" width="350" height="350"></a>
+  <a href= "404.html"><img src="images/design_us.gif" class="img-responsive img-circle margin" style="display:inline" alt="designus" width="350" height="350"></a>
   <h3>Currently underconstruction... Coming Soon</h3>
 </div>
 
 <!-- Second Container -->
 <section class ="what" id="what">
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p> We, the undersigned, the board of Aggie Robotics, 
-                Whereas the students of the College of Engineering at North Carolina Agricultural 
-                and Technical State University seek opportunities to innovate and create in pursuit 
-                of understanding,Whereas opportunities for hands on application of engineering are not 
-                readily available to underclassmen,Whereas the Department of Electrical and Computer 
+  <h1 class="margin">What Am I?</h1>
+  <p> We, the undersigned, the board of Aggie Robotics,
+                Whereas the students of the College of Engineering at North Carolina Agricultural
+                and Technical State University seek opportunities to innovate and create in pursuit
+                of understanding,Whereas opportunities for hands on application of engineering are not
+                readily available to underclassmen,Whereas the Department of Electrical and Computer
                 Engineering seeks to encourage students to apply their knowledge and seek new technical skills,
                 Found on this day the Aggie Robotics Club.</p>
   <a href="https://github.com/aggierobotics" class="btn btn-default btn-lg">
-    Our Github <span class="glyphicon glyphicon-home"></span> 
+    Our Github <span class="glyphicon glyphicon-home"></span>
   </a>
 </div>
+</section>
+<!-- Container -->
+
+<section id="events" class="events">
+  <div class="container-fluid  text-center bg-6">
+
+        <h1 class="margin" style="color:black">Upcoming Events</h1>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="glidetext" style="left: -3000px"><h2 style="color:#1abc9c;;font-family: 'Syncopate', sans-serif;">ROBOTIC OBSTACLE COURSE</h2></div>
+            <div class="glidetext" style="left: -3000px"><h2 style="color:#29AAE2;font-family: 'Syncopate', sans-serif;float:left;">DESIGN</h2></div>
+            <div class="glidetext" style="left: -3000px"><h2 style="color:#29AAE2;font-family: 'Syncopate', sans-serif;float:right">
+
+              BUILD</h2></div>
+              <div class="glidetext" style="left: -3000px"><h2 style="color:#474e5d;font-family: 'Syncopate', sans-serif;margin-bottom:10px;">&</h2></div>
+            <div class="glidetext" style="left: -3000px"><h2 style="color:#135DB1;font-family: 'Syncopate', sans-serif;">your <b>dfrobot</b></h2></div>
+            <div class="glidetext" style="left: -3000px"><h2 style="color:#474e5d;font-family: 'Syncopate', sans-serif;">Team <b style="color:#5f9ea0">VS</b> team</h2></div>
+            <div class="glidetext" style="left: -3000px"><h2 style="color:#1abc9c;font-family: 'Syncopate', sans-serif;">WIN <b style="color:red">PRIZES</b></h2></div>
+
+
+
+
+
+          </div>
+          <div class="col-sm-6">
+            <img id="cherry" src="images/robot.jpg" class="img-circle img-responsive img-shadow float:left"  alt="Image"class="img-circle"
+          width="400" height="400">  </div>
+
+
+        </div>
+  </div>
+
+
+
 </section>
 <!-- Third Container -->
 <section class ="who" id = "who">
 	<div class="container-fluid bg-2 text-center">
-	<h3 class="margin"> Who are we? </h3>
-	<div class="row">
-		<div class="col-xs-6 col-md-2" style=""><div class= "row">
-		<img src="images/team/chris.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
-		</div>Chris Cannon (President)</div>
-		
-		
-		<div class="col-xs-6 col-md-2" style=""><div class= "row">
-		<img src="images/team/holley.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
-		</div>Holley Jupiter (V. President)</div>
-		
-		<div class="col-xs-6 col-md-2" style=""><div class= "row">
-		<img src="images/team/kenny.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
-		</div>Kenny Lindsay (Sr. Technician)</div>
-		
-		<div class="col-xs-6 col-md-2" style=""><div class= "row">
-		<img src="images/team/robert.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
-		</div>Robert Mwaniki(Treasurer)</div>
-		<div class="col-xs-6 col-md-2" style=""><div class= "row">
-		<img src="images/team/uriah.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
-		</div>Uriah Newkirk(Secretary)</div>
-		<div class="col-xs-6 col-md-2" style=""><div class= "row">
-		<img src="images/team/abby.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
-		</div>Abbigail Waddell (Sr. Technician)</div>
-		
-		
+	<h1 class="margin"> Who are we? </h1>
+  <div class="container">
+    <!--Chris, Holley, Uriah-->
+  	<div class="row">
+  		<div class="col-sm-4" style="">
+
+  		<img src="images/team/chris.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+      <br>
+      <h3>Chris Cannon <br>(President)
+      <h3>Computer Engineer<h3>
+      </div>
+
+
+  		<div class="col-md-4" style="">
+  		<img src="images/team/holley.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+      <br>
+      <h3>Holley Jupiter <br>(V. President)</h3>
+      <h3>Computer Engineer</h3>
+      </div>
+
+      <div class="col-md-4" style="">
+  		<img src="images/team/uriah.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+  		<br>
+      <h3>Uriah Newkirk <br>(Secretary)</h3>
+      <h3>Computer Engineer</h3>
+    </div>
+    </div>
+    <!--Kenny, Robert Abbigail, Alan -->
+    <div class="row">
+
+      <div class="col-md-3" style="">
+      <img src="images/team/robert.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+      <br>
+      <h3>Robert Mwaniki <br>(Treasurer)</h3>
+      <h3>Computer Engineer</h3>
+      </div>
+
+      <div class="col-sm-3" style="">
+      <img src="images/team/kenny.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+      <br>
+      <h3>Kenny <br>(Sr. Technician)<br>
+      <h3>Electrical Engineer<h3>
+      </div>
+
+
+
+
+      <div class="col-md-3" style="">
+      <img src="images/team/abby.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+      <br>
+      <h3>Abbigail Waddel <br>(Sr. Technician)</h3>
+      <h3>Electrical Engineer</h3>
+    </div>
+
+    <div class="col-md-3" style="">
+    <img src="images/team/alan.png" class="img-rounded" style="rounded mx-auto d-block; opacity: 10" alt="Image" width="200" height="200">
+    <br>
+    <h3>Alan Kruger <br>(Sr. Technician)</h3>
+    <h3>Electrical Engineer</h3>
+  </div>
+    </div>
+
+
+
+
+
+      </div>
+
+
+    <!--End of Row -->
+
+
+
+
 	</div>
+</section>
+
+<section id="about">
+  <div class="container-fluid bg-3 text-center">
+    <h1 class="margin"> About Us</h1>
+    <div class="row">
+      <div class="col-md-4">
+    <div class ="blockquote" style="height: 500px">
+      I was born in Maine and raised in Spain as a child. I was influenced by my constant surrounding of intriguing vehicles from 2 different continents and quickly developed an automotive enthusiasm that persists to this day. With that enthusiasm, I drew and designed concept/production cars as a kid and during a certain point in my teen-hood, I began to animate them in a videogame platform known as Little Big Planet (Create Mode) where my vehicles were allowed to accelerate freely, sense their surroundings, and annihilate other objects using simple logic on simulated circuit boards. I knew that I wanted to pursue a career in electrical engineering in this industry if not in aviation. Currently, I specialize in signal/image processing for a soon to be autonomous car for the AutoDrive team at NC A&T.
+
+      <p>-Alan Kruger</p>
+    </div>
+  </div>
+    <div class="col-md-4">
+    <div class ="blockquote" style="height:500px;">
+      Hello, my name is Robert. I was born in Kenya and moved to North Carolina with my family. I was always a mischievous kid, that liked to tinker around with computers. I remember messing around with the components of the hardware in the home computer and receiving Blue Screen of death error messages. It was then that I learned that I was good with computers because, unbeknownst to my mother, I would hastily troubleshoot the problem before she got back from work - which occurred on more than one occasion. Other than computers I have always been creative, whether it was painting, video editing, or graphic design. At NCA&T I have found a nourishing environment to combine my love of technology with my creative side. In my free time you can find me working on websites, or designing something.
+
+<p>-Robert Mwaniki</p>
+    </div>
+  </div>
+</div>
+  </div>
+
 </section>
 
 
 <!-- Fourth Container (Grid) -->
 <section class ="where" id ="where">
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
+<div class="container-fluid bg-3 text-center">
+  <h1 class="margin">Where To Find Me?</h1><br>
   <div class="row">
     <div class="col-sm-4">
 		<p>We are located at North Carolina Agricultural and Technical State University</p>
-		<div class ="div-wrapper"><a href ="https://www.google.com/maps/place/North+Carolina+Agricultural+and+Technical+State+University/@36.077012,-79.7740933,17z/data=!3m1!4b1!4m5!3m4!1s0x885318ce56445187:0x9210566d49c974e0!8m2!3d36.0770077!4d-79.7719046" target="_blank"> <p>1601 E Market St, Greensboro, NC 27401</p></a>
+		<div class ="div-wrapper"><a href ="https://www.google.com/maps/place/North+Carolina+Agricultural+and+Technical+State+University/@36.077012,-79.7740933,17z/data=!3m1!4b1!4m5!3m4!1s0x885318ce56445187:0x9210566d49c974e0!8m2!3d36.0770077!4d-79.7719046" target="_blank">
+      <address>1601 E Market St, Greensboro,<br>
+         NC 27401
+       </address></a>
 		  <a href ="http://www.ncat.edu/" target="_blank" >
 		  <img src="images/ncat.png" class="img-rounded" style="rounded mx-auto d-block" alt="Image" width="267" height="237">
 		  </a>
@@ -169,34 +334,103 @@
 		  </div>
     </div>
     <div class="col-sm-4">
-		  <p>We are working in conjuction with the school's makerspace. our on campus locations are in Cherry 318, and McNair Dungeon.</p>
-		  <div class ="div-wrapper">
+		  <p>We are working in conjuction with the ECEN's makerspace. Our on campus locations are in.</p>
+        <br> <h4>Cherry 318</h4>
+        <img id="cherry" src="images/cherry.jpg" class="img-circle img-shadow"  alt="Image"class="img-circle"
+    width="200" height="200"><br>
 
-			 <a href ="makerspace.html"> <img src="images/makerspace.jpg" class="img-rounded" style="rounded mx-auto d-block" alt="Image" width="267" height="237">
-			  </a> 
-      </div>
+        <h4>McNair 121.</h4>
+
+          <img id="mcnair" src="images/mcnair.jpg" class="img-circle img-shadow"  alt="Image"class="img-circle"
+      width="200" height="200">
+
+
+
     </div>
     <div class="col-sm-4">
       <p>You can also reach us at our <a href="https://www.facebook.com/Aggie-Robotics-Club-1705670803009762/" target="_blank">Facebook page.</a> Slack or GroupMe</p>
-     
-        
-     
+
+      <div class ="div-wrapper">
+      <p>Come visit the Makerspace, located in Mcnair 121.
+      <a href ="http://nowyoucanfindme.github.io/"> <img src="images/makerspace.jpg" class="img-rounded" style="rounded mx-auto d-block" alt="Image" width="267" height="237">
+       </a>
+      </div>
+
     </div>
-    
-  
+
+
   </div>
 </div>
 </section>
 
-<!-- Fifth Container --> 
+<!-- Fifth Container -->
 <section class ="why" id ="why">
 
 </section>
+
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
    <div class = "copyright">&copy;2017 - <strong>AGGIE ROBOTICS</strong></div>
 </footer>
+
+
+<script type="text/javascript">
+
+        //Sequential fly-in text script- by JavaScriptKit.com
+        //For this script and 400+ more, visit http://www.javascriptkit.com
+        //This notice must stay intact for use
+
+        var pausebetweenmsg=10 //customize pause in miliseconds between each message showing up (3000=3 seconds)
+        var glidespeed=50 //customize glide speed in pixels per frame.
+
+        var curobjindex=0
+
+        function actualstyle(el, cssproperty){
+        if (el.currentStyle)
+        return el.currentStyle[cssproperty]
+        else if (window.getComputedStyle){
+        var elstyle=window.getComputedStyle(el, "")
+        return elstyle.getPropertyValue(cssproperty)
+        }
+        }
+
+        function collectElementbyClass(){
+        var classname="glidetext"
+        glidearray=new Array()
+        var inc=0
+        var alltags=document.all? document.all : document.getElementsByTagName("*")
+        for (i=0; i<alltags.length; i++){
+        if (alltags[i].className==classname)
+        glidearray[inc++]=alltags[i]
+        }
+        if (glidearray.length>0)
+        onebyoneglide()
+        }
+
+        function onebyoneglide(){
+        if (curobjindex<glidearray.length)
+        glidetimer=setInterval("glideroutine()",50)
+        }
+
+        function glideroutine(){
+        if (parseInt(actualstyle(glidearray[curobjindex], "left"))<0)
+        glidearray[curobjindex].style.left=parseInt(actualstyle(glidearray[curobjindex], "left"))+50+"px"
+        else{
+        glidearray[curobjindex].style.left=0
+        curobjindex++
+        clearInterval(glidetimer)
+        setTimeout("onebyoneglide()", pausebetweenmsg)
+        }
+        }
+
+        if (window.addEventListener)
+        window.addEventListener("load", collectElementbyClass, false)
+        else if (window.attachEvent)
+        window.attachEvent("onload", collectElementbyClass)
+        else if (document.getElementById)
+        window.onload=collectElementbyClass
+        </script>
 
 </body>
 </html>
