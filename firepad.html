@@ -6,6 +6,8 @@
   <meta charset="utf-8" />
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <!--BootStrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- CodeMirror -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
@@ -23,23 +25,62 @@
     #firepad-container {
       width: 100%;
       height: 100%;
+      background-color: #DDDDDD;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+    .navbar-nav  li a:hover {
+        color: #1abc9c !important;
     }
   </style>
 </head>
 
 <body onload="init()">
+  <!-- Navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">AGGIE|ROBOTICS</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#what">WHAT</a></li>
+
+          <li><a href="#events">EVENTS</a></li>
+          <li><a href="#who">WHO</a></li>
+          <li><a href="#about">WHY</a></li>
+          <li><a href="#where">WHERE</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div id="firepad-container"></div>
 
   <script>
     function init() {
       //// Initialize Firebase.
       //// TODO: replace with your Firebase project configuration.
-     
+
 	  ////ADD DETAILS 6/18/17
 	  var config = {
-        apiKey: "",
-        authDomain: "",
-        databaseURL: ""
+        apiKey: "AIzaSyDFilEzgiwSWBA5kW0TqgBqcdQKIfar2TM",
+        databaseURL: 'https://aggierobotics-10746.firebaseio.com'
       };
       firebase.initializeApp(config);
       //// Get Firebase Database reference.
@@ -120,7 +161,7 @@
     }
     // Helper to get hash from end of URL or generate a random one.
     function getExampleRef() {
-      var ref = firebase.database().ref();
+      var ref = firebase.database().ref().child('firepad');
       var hash = window.location.hash.replace(/#/g, '');
       if (hash) {
         ref = ref.child(hash);
